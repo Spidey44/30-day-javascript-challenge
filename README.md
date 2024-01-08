@@ -1,1 +1,1 @@
-30 Day Challenge (JS31)
+30 Day Challenge (JS-31)
