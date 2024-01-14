@@ -38,14 +38,18 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-//#1 - take inventors #2- loop over #3- take if year greater than 1500 and less than  4- return true mean keep
+//#1 - take inventors #2- loop over #3- take if year greater than 1500 and less than  
+//if (inventor.year >= 1500 && inventor.year < 1600))return true, keep it
     const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
 // tips for better display
     console.table(fifteen);
 
+
+
+
     // Array.prototype.map()
     // 2. Give us an array of the inventor first and last names
-    //like stamp machine that take and retrun item with stamp
+    //like factory machine that take and return the same # of item with a stamp
     const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
     console.log(fullNames);
 
@@ -53,12 +57,8 @@
     // 3. Sort the inventors by birthdate, oldest to youngest
     //First person is a, Second person is B ===> items move up and down
     // const ordered = inventors.sort(function(a, b) {
-    //   if(a.year > b.year) {
-    //     return 1;
-    //   } else {
-    //     return -1;
-    //   }
-    // });
+    //if(a.year > b.year) { return 1} else {return -1;}});
+    //take items 2 by 2 and sort them
 
     const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
     console.table(ordered);
