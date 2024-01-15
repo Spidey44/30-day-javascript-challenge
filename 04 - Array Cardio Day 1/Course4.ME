@@ -1,0 +1,72 @@
+<!-- practice: 
+
+ternary
+function getFee(isMember) { return isMember ? '$2.00' : '$10.00';}
+console.log(getFee(true)); // Expected output: "$2.00"
+console.log(getFee(false)); // Expected output: "$10.00"
+console.log(getFee(null)); // Expected output: "$10.00"
+
+
+  filter()
+    const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+    const result = words.filter((word) => word.length > 6);
+    console.log(result);
+    // Expected output: Array ["exuberant", "destruction", "present"]
+
+  map()
+    const array1 = [1, 4, 9, 16];
+    // Pass a function to map
+    const map1 = array1.map((x) => x * 2);
+    console.log(map1);
+    // Expected output: Array [2, 8, 18, 32]
+
+  sort(a, b)
+    const months = ['March', 'Jan', 'Feb', 'Dec'];
+    months.sort();
+    console.log(months);
+    // Expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+    const array1 = [1, 30, 4, 21, 100000];
+    array1.sort();
+    console.log(array1);
+    // Expected output: Array [1, 100000, 21, 30, 4]
+
+  split()
+    const str = 'The quick brown fox jumps over the lazy dog.';
+    const words = str.split(' ');
+    console.log(words[3]);
+    // Expected output: "fox"
+
+    const chars = str.split('');
+    console.log(chars[8]);
+    // Expected output: "k"
+
+    const strCopy = str.split();
+    console.log(strCopy);
+    // Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+  
+  reduce()
+    const array1 = [1, 2, 3, 4];
+    // 0 + 1 + 2 + 3 + 4
+    const initialValue = 0;
+    const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+  console.log(sumWithInitial);
+  // Expected output: 10
+
+const el = document.querySelector(".myclass");
+//returns the first Element within the document that matches the specified selector
+
+const matches = document.querySelectorAll("p");
+//Obtain a NodeList of all of the <p> elements in the document
+
+const matches = array.from(document.querySelectorAll("p"));
+const matches = [...document.querySelectorAll("p")];
+//2 options to convert NodeList into an array => for mapping, 
+
+  console.table()
+  console.log()
+-->
