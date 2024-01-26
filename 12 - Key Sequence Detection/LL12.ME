@@ -1,0 +1,38 @@
+<!-- practice: 
+
+#1 - .splice() 
+Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// Inserts at index 1 console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');
+// Replaces 1 element at index 4 console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+#2 - .join() 
+Creates and returns a new string by concatenating all of the elements in this array, separated by commas or a specified separator string
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join()); // Expected output: "Fire,Air,Water
+console.log(elements.join(''));// Expected output: "FireAirWater"
+console.log(elements.join('-'));// Expected output: "Fire-Air-Water"
+
+#3 - .includes() 
+Determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+const array1 = [1, 2, 3];
+console.log(array1.includes(2));// Expected output: true
+
+const pets = ['cat', 'dog', 'bat']; 
+console.log(pets.includes('cat'));// Expected output: true
+console.log(pets.includes('at'));// Expected output: false
+
+
+#4  if (pressed.join("").includes(secretCode)) {
+          console.log("DING DING!");
+        }
+-->
