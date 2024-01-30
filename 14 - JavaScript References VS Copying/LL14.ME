@@ -33,4 +33,25 @@ console.log(animals.slice(2, 4)); // Expected output: Array ["camel", "duck"]
 
 const team4 = [...players];
 team4[3] = 'heeee hawww';
+
+
+SOL object The Object.assign()
+copies all enumerable own properties from one or more source objects to a target object. 
+It returns the modified target object
+
+PB Object
+const person = { name: 'Wes Bos', age: 80}; 
+const captain = person; // captain.number = 99;
+
+SOL object The Object.assign()
+copies all enumerable own properties from one or more source objects to a target object. 
+It returns the modified target object
+
+LIMITATION: goes one level deep only.
+
+
+#1 const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+console.log(cap2);
+
+#2 const cap3 = {...person};
 -->
