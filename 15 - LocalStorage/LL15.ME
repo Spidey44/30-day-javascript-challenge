@@ -29,13 +29,40 @@ Refresh from keep the data
     }).join('');
   }
 
+-> localstorage.setItem()
+when passed a key name and value, will add that key to the given Storage object, 
+or update that key's value if it already exists
+  function populateStorage() {
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
+}
 
-#2 Event delegation fix element does not exist
-Add a object and directly click it
+Storage only supports storing and retrieving strings. 
+If you want to save other data types, you have to convert them to strings. For plain objects and arrays, you can use JSON.stringify().
 
-#3 Add item on a form element
+
+
+
+#2 Event delegation fix element does not exist 
+-> cannot be detected by event listener
+-> Add a object and directly click it =
+-> Negligent child ( forget), responsible parent ( remember tell how handle event)
+
+
+
+#3 Add item on a form element - persist the toggling
 
 5 Load data
+
+  #5.1 on page Load, add object and update everytime
+    localStorage.setItem('items', JSON.stringify(items));
+    #last on page  load
+    populateList(items, itemsList);
+
+
+  #5.2 on search, Get the object or fall back on empty array.
+    const items = JSON.parse(localStorage.getItem('items')) || [];
 
 #4 Store Data in an array of object
 -->
