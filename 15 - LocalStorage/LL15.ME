@@ -41,6 +41,14 @@ or update that key's value if it already exists
 Storage only supports storing and retrieving strings. 
 If you want to save other data types, you have to convert them to strings. For plain objects and arrays, you can use JSON.stringify().
 
+  #1 on page Load, add object and update everytime
+    localStorage.setItem('items', JSON.stringify(items));
+    #last on page  load
+    populateList(items, itemsList);
+
+
+  #2 on search, Get the object or fall back on empty array.
+    const items = JSON.parse(localStorage.getItem('items')) || [];
 
 
 
@@ -49,20 +57,8 @@ If you want to save other data types, you have to convert them to strings. For p
 -> Add a object and directly click it =
 -> Negligent child ( forget), responsible parent ( remember tell how handle event)
 
-
-
-#3 Add item on a form element - persist the toggling
-
-5 Load data
-
-  #5.1 on page Load, add object and update everytime
-    localStorage.setItem('items', JSON.stringify(items));
-    #last on page  load
-    populateList(items, itemsList);
-
-
-  #5.2 on search, Get the object or fall back on empty array.
-    const items = JSON.parse(localStorage.getItem('items')) || [];
-
-#4 Store Data in an array of object
+function toggleDone(e) {
+    if (!e.target.matches('input')) return; // skip this unless it's an input
+  }
+  itemsList.addEventListener('click', toggleDone);
 -->
