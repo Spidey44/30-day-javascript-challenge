@@ -1,0 +1,36 @@
+<!-- 
+
+.replace() 
+returns a new string with one, some, or all matches of a pattern replaced by a replacement. 
+The pattern can be a string or a RegExp, 
+The replacement can be a string or a function called for each match
+
+        const paragraph = "I think Ruth's dog is cuter than your dog!";
+        console.log(paragraph.replace("Ruth's", 'my'));
+        // Expected output: "I think my dog is cuter than your dog!"
+
+        const regex = /Dog/i;
+        console.log(paragraph.replace(regex, 'ferret'));
+        // Expected output: "I think Ruth's ferret is cuter than your dog!"
+
+
+.trim() 
+removes whitespace from both ends of this string and returns a new string, 
+without modifying the original string.
+
+        const greeting = '   Hello world!   ';
+        console.log(greeting); // Expected output: "   Hello world!   ";
+
+        console.log(greeting.trim()); // Expected output: "Hello world!";
+
+.sort()
+Assumes that you are sorting strings. 
+When sorting numbers, the default behavior will not sort them properly.
+
+.sort((a,b) => a-b);
+The function that you pass tells how to sort the elements.
+It takes two parameters (a and b) that represent any two elements from the array. 
+Pass the function (a, b) => a - b, ask to sort the numbers in ascending order.
+
+const sortedBands = bands.sort((a, b) => strip(a) > strip(b) ? 1 : -1);
+-->
