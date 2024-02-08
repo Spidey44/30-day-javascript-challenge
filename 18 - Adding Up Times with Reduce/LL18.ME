@@ -36,7 +36,7 @@
                 #1.1 const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
                 #1.1 const timeNodes = [...document.querySelectorAll('[data-time]')];
 
-        #2 Convert data into number: Minutes/secs
+        #2 Convert data into number
                 const seconds = timeNodes
                 .map(node => node.dataset.time)
                 .map(timeCode => {
@@ -45,8 +45,16 @@
                                  })
                 .reduce((total, vidSeconds) => total + vidSeconds);
 
+        #3 Convert into sec/min/hour
+                let secondsLeft = seconds;
+                const hours = Math.floor(secondsLeft / 3600); -> from 4.98 to 4
+                secondsLeft = secondsLeft % 3600; -> from 0.98 to 3538 secs
+
+                const mins = Math.floor(secondsLeft / 60); -> 58 mins
+                secondsLeft = secondsLeft % 60;
+
         #3 Ad them all up
-        #4 Console log 
+                console.log(hours, mins, secondsLeft);
 
 
 -->
