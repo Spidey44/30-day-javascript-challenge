@@ -1,0 +1,21 @@
+<!-- 
+       #1 LAunch the server with package.json 
+        -> npm install
+        -> npm start to run th scrip
+
+        #2 Get the stream( promise) and the video with error
+
+        function getVideo() {
+         navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+         .then(localMediaStream => {
+     å   video.srcObject = localMediaStream;
+      video.play();
+    })
+    .catch(err => {
+      console.error(`OH NO!!!`, err);
+    });
+}
+
+video.play();
+
+-->
